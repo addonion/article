@@ -1,0 +1,55 @@
+//Колонки
+$grid-gutter-width: 40px;
+
+//Оформление кнопок и ссылок
+$primary: #ff892a;
+.btn-primary {color: #fff !important;}
+$link-hover-decoration: none;
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+
+
+//Подключаем шрифты
+@font-face {
+    font-family: 'StagSansLCTTMedium';
+    src: url('../font/StagSansLCTTMedium.eot');
+    src: url('../font/StagSansLCTTMedium.eot?#iefix') format('embedded-opentype'),
+    url('../font/StagSansLCTTMedium.woff') format('woff'),
+    url('../font/StagSansLCTTMedium.ttf') format('truetype'),
+    url('../font/StagSansLCTTMedium.svg#StagSansLCTTMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'StagSansLCTTBook';
+    src: url('../font/StagSansLCTTBook.eot');
+    src: url('../font/StagSansLCTTBook.eot?#iefix') format('embedded-opentype'),
+    url('../font/StagSansLCTTBook.woff') format('woff'),
+    url('../font/StagSansLCTTBook.ttf') format('truetype'),
+    url('../font/StagSansLCTTBook.svg#StagSansLCTTBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font14px {
+    font-size: 0.875rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'StagSansLCTTMedium';
+}
+h5, h6 {
+    font-family: 'StagSansLCTTBook';
+}
+

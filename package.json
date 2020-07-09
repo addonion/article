@@ -1,0 +1,27 @@
+{
+    "name": "my-gridsome-site",
+    "private": true,
+    "scripts": {
+        "build": "gridsome build",
+        "develop": "gridsome develop",
+        "explore": "gridsome explore"
+    },
+    "dependencies": {
+        "@gridsome/source-filesystem": "^0.6.2",
+        "@gridsome/source-graphql": "^0.1.0",
+        "@gridsome/source-strapi": "^0.1.0",
+        "axios": "^0.19.2",
+        "bootstrap": "^4.5.0",
+        "bootstrap-vue": "^2.15.0",
+        "graphql-request": "^1.8.2",
+        "gridsome": "^0.7.19",
+        "gridsome-plugin-gtm": "^0.1.1",
+        "gridsome-plugin-pwa": "^0.0.13",
+        "gridsome-source-graphql": "^1.0.2",
+        "gridsome-source-wordpress": "^0.4.13",
+        "node-sass": "^4.13.0",
+        "sass-loader": "8.0.2",
+        "vue": "^2.6.11",
+        "vue-read-progress": "^1.0.4"
+    }
+}
