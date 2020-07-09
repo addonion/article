@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-    pathPrefix: '/blog/article/',
+    pathPrefix: '/',
 
     siteName: 'Carrot quest',
     titleTemplate: "%s",
