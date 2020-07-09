@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+    pathPrefix: '/blog/article/',
 
     siteName: 'Carrot quest',
     titleTemplate: "%s",
@@ -17,6 +18,9 @@ module.exports = {
                 enabled: true,
                 debug: false
             }
+        },
+        {
+            use: "gridsome-plugin-service-worker",
         },
         {
             use: 'gridsome-plugin-pwa',

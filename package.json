@@ -23,5 +23,8 @@
         "sass-loader": "8.0.2",
         "vue": "^2.6.11",
         "vue-read-progress": "^1.0.4"
+    },
+    "devDependencies": {
+        "gridsome-plugin-service-worker": "^0.1.5"
     }
 }
