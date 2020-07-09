@@ -22,7 +22,7 @@ module.exports = {
             use: 'gridsome-plugin-pwa',
             options: {
                 title: 'Carrot quest',
-                startUrl: '/',
+                startUrl: 'https://www.carrotquest.io/',
                 display: 'standalone',
                 statusBarStyle: 'default',
                 manifestPath: 'manifest.json',
