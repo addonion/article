@@ -5,40 +5,68 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+	pathPrefix: '/blog/article/',
 
-    siteName: 'Carrot quest',
-    titleTemplate: "%s",
-    
-    plugins: [
-        {
-            use: 'gridsome-plugin-gtm',
-            options: {
-                id: 'GTM-TKFL867',
-                enabled: true,
-                debug: false
-            }
-        },
-        {
-            use: "gridsome-plugin-service-worker",
-        },
-        {
-            use: 'gridsome-plugin-pwa',
-            options: {
-                title: 'Carrot quest',
-                startUrl: 'https://www.carrotquest.io/',
-                display: 'standalone',
-                statusBarStyle: 'default',
-                manifestPath: 'manifest.json',
-                disableServiceWorker: true,
-                serviceWorkerPath: 'service-worker.js',
-                cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
-                shortName: 'Carrot quest',
-                themeColor: '#ff892a',
-                backgroundColor: '#ffffff',
-                icon: './static/favicon.png', // must be provided
-                msTileImage: '',
-                msTileColor: '#ff892a'
-            }
-        }
-    ],
+	siteName: 'Carrot quest',
+	titleTemplate: "%s",
+
+	transformers: {
+		remark: {
+		  externalLinksTarget: '_blank',
+		  externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+		  anchorClassName: 'icon icon-link',
+		  plugins: [
+			// ...global plugins
+		  ]
+		}
+	  },
+	
+	plugins: [
+		{
+			use: 'gridsome-plugin-gtm',
+			options: {
+				id: 'GTM-TKFL867',
+				enabled: true,
+				debug: false
+			}
+		},
+		{
+			use: 'gridsome-plugin-pwa',
+			options: {
+				// Service Worker Options
+				disableServiceWorker: false,
+				serviceWorkerPath: 'service-worker.js',
+				cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+				disableTemplatedUrls: false,       // Optional
+	
+				// Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+				manifestPath: 'manifest.json',
+				title: 'Carrot quest',
+				startUrl: 'https://www.carrotquest.io/blog/article/',
+				display: 'standalone',
+				statusBarStyle: 'default',
+				themeColor: '#ff892a',
+				backgroundColor: '#ffffff',
+				icon: './static/favicon.png'
+			}
+		},
+		{
+			use: '@gridsome/source-filesystem',
+			options: {
+				path: 'posts/**/*.md',
+				typeName: 'Post',
+				remark: {
+					plugins: [
+						// ...local plugins
+					]
+				}
+			}
+		},
+		{
+			use: `gridsome-plugin-netlify-cms`,
+			options: {
+				publicPath: `/admin`
+			}
+		},
+	],
 }

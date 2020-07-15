@@ -11,12 +11,6 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 export default function(Vue, { router, head, isClient, appOptions }) {
     
-    //Google fonts OpenSans
-    head.link.push({
-        rel: 'stylesheet',
-        href: 'https://some-server.com/external-styleheet.css'
-    })
-    
     //Bootstrap
     Vue.use(BootstrapVue)
 

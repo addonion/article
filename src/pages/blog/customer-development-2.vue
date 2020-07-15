@@ -837,7 +837,8 @@
 </script>
 
 <style lang="scss">
-$font14px: 0.875rem;
+	$font14px: 0.875rem;
+	
 	.post {
 		&__image {
 			margin-top: 75px;
