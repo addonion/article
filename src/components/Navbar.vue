@@ -62,12 +62,6 @@
 				// this.scrolled = window.scrollY > 250;
 			}
 		},
-		created() {
-			window.addEventListener("scroll", this.handleScroll);
-		},
-		destroyed() {
-			window.removeEventListener("scroll", this.handleScroll);
-		},
 		data: () => ({
 			limitPosition: 500,
       		scrolled: false,
