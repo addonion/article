@@ -2,12 +2,12 @@
 	<Layout class="post">
 		<!-- Прогрес бар чтения -->
 		<ClientOnly>
-			<read-progress  color="#333" height="2px" :shadow="false"></read-progress>
+			<read-progress  color="#FFD5B2" height="2px" :shadow="false"></read-progress>
 		</ClientOnly>
 
 		<!-- Изображение записи -->
 		<b-row>
-			<b-col class="categories">
+			<b-col class="post__categories mt-3 mb-4">
 				<b-nav>
 					<b-nav-item href="/blog/kejsy/">Кейсы</b-nav-item>
 					<b-nav-item href="/blog/konversiya/">Конверсия</b-nav-item>
@@ -23,16 +23,16 @@
 
 		<!-- Хлебные крошки -->
 		<b-row>
-			<b-col col-xl="9" offset-xl="1">
+			<b-col col xl="10" offset-xl="1">
 				<div class="post__about">
 					
-					<b-breadcrumb>
+					<b-breadcrumb class="font12px mb-3">
 						<b-breadcrumb-item href="/">Главная</b-breadcrumb-item>
 						<b-breadcrumb-item href="/blog/">Блог</b-breadcrumb-item>
-						<b-breadcrumb-item active>Customer Development или как протестировать идею фичи за 2 дня</b-breadcrumb-item>
+						<b-breadcrumb-item active>Customer Development или как протестировать идею фичи за 2 дня</b-breadcrumb-item>
 					</b-breadcrumb>
 
-					<h1>Customer Development или как протестироваbreadcrumbть идею фичи за 2 дня</h1>
+					<h1 class=" mb-3">Customer Development или как протестировать идею фичи за 2 дня</h1>
 
 					<div class="post__about__info font14px">
 						<span class="date">20 мая, 2020</span>
@@ -46,24 +46,20 @@
 
 		<!-- Изображение записи -->
 		<b-row>
-			<b-col class="post__image">
+			<b-col class="post__image my-5">
 				<g-image src="~/assets/images/article/Фичи-min.jpg" width="1100" alt="Customer Development или как протестировать идею фичи за 2 дня" />
 			</b-col>
 		</b-row>
 		
 		<!-- Текст статьи -->
-		<b-row>
-			<b-col>
+		<b-row class="post__content font17px">
+			<div class="post__authtor">
+				<g-image src="~/assets/images/article/masha.png" alt="Мария Бурдина" />
+				<h5>Мария Бурдина</h5>
+				<p class="font14px">Пишу о том, в чем мы разбираемся.</p>
+			</div>
 
-				<div class="post__authtor">
-					<g-image src="~/assets/images/article/masha.png" alt="Мария Бурдина" />
-					<h5>Мария Бурдина</h5>
-					<p class="font14px">Пишу о том, в чем мы разбираемся.</p>
-				</div>
-
-			</b-col>
-
-			<b-col cols="12" class="post__content font17px">
+			<b-col offset-xl="1">
 
 
 			<h3 id="toc-menu">Содержание:</h3>
@@ -858,24 +854,34 @@
 </script>
 
 <style lang="scss">
-	
-	
 	.post {
-		&__image {
-			margin-top: 40px;
-			border-radius: 5px;
+		*::selection {
+			color: #fff;
+			background: #3735A8;
 		}
 
-		&__about {
-
-			&__info {
-				color: #8593A6;
-				margin-bottom: 1.5rem;
+		&__categories {
+			.nav-item {
+				margin-right: 24px;
+			}
+			.nav-link {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			.active {
+				border-bottom: 2px solid #467AFF;
 			}
 		}
 
+		&__image img {
+			border-radius: 5px;
+		}
+
+		&__about__info {
+			color: #A6A6A6;
+		}
+
 		&__authtor {
-			margin-top: 48px;
 			position: absolute;
 			top: 0;
 			right: 20px;
@@ -889,6 +895,7 @@
 		$content-tags: 'h1, h2, h3, p, figure, ul, ol';
 
 		&__content {
+			position: relative;
 			line-height: 1.875em;
 
 			h1, h2, h3 {

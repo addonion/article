@@ -194,7 +194,10 @@
 		button,
 		#nav_collapse {
 			position: relative;
-			z-index: 3
+			z-index: 3;
+			&:focus-within {
+				outline: none !important;
+			}
 		}
 
 		.logo {
@@ -209,7 +212,7 @@
 			border: none;
 			border-left: 1px solid #333;
 			border-bottom: 1px solid #333;
-			transform: rotate(-45deg);    
+			transform: rotate(-45deg);outline: none !important;
 		}
 
 		.dropdown-item {

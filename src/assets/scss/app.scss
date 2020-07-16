@@ -10,6 +10,8 @@ $link-hover-decoration: none;
 @import '~bootstrap-vue/src/index.scss';
 
 
+$blue-link: #467AFF;
+
 
 //Подключаем шрифты
 @font-face {
@@ -25,17 +27,29 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.font12px {
+    font-size: 0.750em;
+}
 .font14px {
-    font-size: 0.875rem;
+    font-size: 0.875em;
 }
 .font17px {
     font-size: 1.063em;
 }
 
 a {
-    color: #467AFF;
+    color: $blue-link;
 }
 
 h1 {
     font-family: 'Stag Sans Black';
+}
+
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    * {
+        color: #A6A6A6;
+    }
 }
