@@ -2,8 +2,47 @@
 	<Layout class="post">
 		<!-- Прогрес бар чтения -->
 		<ClientOnly>
-			<read-progress  color="#ff892a" height="3px" :shadow="false"></read-progress>
+			<read-progress  color="#333" height="2px" :shadow="false"></read-progress>
 		</ClientOnly>
+
+		<!-- Изображение записи -->
+		<b-row>
+			<b-col class="categories">
+				<b-nav>
+					<b-nav-item href="/blog/kejsy/">Кейсы</b-nav-item>
+					<b-nav-item href="/blog/konversiya/">Конверсия</b-nav-item>
+					<b-nav-item href="/blog/automation/">Автоматизация</b-nav-item>
+					<b-nav-item href="/blog/support/">Поддержка</b-nav-item>
+					<b-nav-item href="/blog/analytics/">Аналитика</b-nav-item>
+					<b-nav-item href="/blog/new/">Обновления</b-nav-item>
+					<b-nav-item href="/blog/academy/" active>Академия</b-nav-item>
+					<b-nav-item href="/blog/world/">Мир</b-nav-item>
+				</b-nav>
+			</b-col>
+		</b-row>
+
+		<!-- Хлебные крошки -->
+		<b-row>
+			<b-col col-xl="9" offset-xl="1">
+				<div class="post__about">
+					
+					<b-breadcrumb>
+						<b-breadcrumb-item href="/">Главная</b-breadcrumb-item>
+						<b-breadcrumb-item href="/blog/">Блог</b-breadcrumb-item>
+						<b-breadcrumb-item active>Customer Development или как протестировать идею фичи за 2 дня</b-breadcrumb-item>
+					</b-breadcrumb>
+
+					<h1>Customer Development или как протестироваbreadcrumbть идею фичи за 2 дня</h1>
+
+					<div class="post__about__info font14px">
+						<span class="date">20 мая, 2020</span>
+						|
+						<span class="time">Время чтения: 10 мин.</span>
+					</div>
+					
+				</div>
+			</b-col>
+		</b-row>
 
 		<!-- Изображение записи -->
 		<b-row>
@@ -14,16 +53,7 @@
 		
 		<!-- Текст статьи -->
 		<b-row>
-			<b-col cols="12">
-
-				<div class="post__about">
-					<div class="post__about__info font14px">
-						<span class="date">20 мая, 2020</span>
-						|
-						<span class="time">Время чтения: 10 мин.</span>
-					</div>
-					<h1>Customer Development или как протестировать идею фичи за 2 дня</h1>
-				</div>
+			<b-col>
 
 				<div class="post__authtor">
 					<g-image src="~/assets/images/article/masha.png" alt="Мария Бурдина" />
@@ -33,64 +63,55 @@
 
 			</b-col>
 
-			<b-col cols="12" class="post__content">
+			<b-col cols="12" class="post__content font17px">
 
 
 			<h3 id="toc-menu">Содержание:</h3>
 				<ol class="table-of-contents">
 					<li>
 						<a rel="nofollow" href="#chto-takoe-customer-development">
-							Что такое Customer Development
+							Что такое Customer Developmen
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#zachem-nuzhen-customer-development-i-kak-ego-rezultaty-rabotayut-na-pr">
 							Зачем нужен Customer Development и как его результаты работают на практике
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#instrumenty-customer-development">
 							Инструменты Customer Development
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#etapy-issledovaniya-i-neobhodimye-shagi">
 							Этапы исследования и необходимые шаги
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#kak-sostavit-gajd-s-voprosami-nbsp">
 							Как составить гайд с вопросами&nbsp;
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#kak-najti-respondentov">
 							Как найти респондентов
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#kak-kvalifitsirovat-respondentov">
 							Как квалифицировать респондентов
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#kak-segmentirovat-respondentov">
 							Как сегментировать респондентов
 						</a>
-
 					</li>
 					<li>
 						<a rel="nofollow" href="#kak-rasschitat-vremya-na-issledovanie-segmenta-kanala">
 							Как рассчитать время на исследование сегмента/канала
 						</a>
-
 					</li>
 				</ol>
 
@@ -837,24 +858,17 @@
 </script>
 
 <style lang="scss">
-	$font14px: 0.875rem;
+	
 	
 	.post {
 		&__image {
-			margin-top: 75px;
+			margin-top: 40px;
 			border-radius: 5px;
 		}
 
 		&__about {
-			background: #FFFFFF;
-			box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
-			border-radius: 5px;
-			padding: 2rem 2.5rem;
-			margin-top: -80px;
-			margin-bottom: 40px; 
 
 			&__info {
-				font-size: $font14px;
 				color: #8593A6;
 				margin-bottom: 1.5rem;
 			}
@@ -875,6 +889,8 @@
 		$content-tags: 'h1, h2, h3, p, figure, ul, ol';
 
 		&__content {
+			line-height: 1.875em;
+
 			h1, h2, h3 {
 				margin-bottom: 1rem;
 			}
@@ -888,14 +904,6 @@
 		}
 
 		@media (min-width: 1200px) {
-			&__about,
-			&__content {
-				margin-left: 60px;
-			}
-
-			&__about {
-				width: 65%;
-			}
 			&__authtor {
 				width: calc(35% - 120px);
 			}
@@ -904,20 +912,11 @@
 				#{$content-tags} {
 					max-width: 65%;
 				}
-				
 			}
 		}
 		@media (max-width: 1199px) {
 			&__image {
 				margin-top: 55px;
-			}
-			&__about,
-			&__content {
-				margin-left: 40px;
-			}
-
-			&__about {
-				width: 70%;
 			}
 			&__authtor {
 				width: calc(30% - 100px);
@@ -927,18 +926,9 @@
 				#{$content-tags} {
 					max-width: 70%;
 				}
-				
 			}
 		}
 		@media (max-width: 991px) {
-			&__about,
-			&__content {
-				margin-left: 0;
-			}
-
-			&__about {
-				width: 100%;
-			}
 			&__authtor {
 				width: 33%;
 				position: relative;
@@ -948,7 +938,6 @@
 				#{$content-tags} {
 					max-width: 100%;
 				}
-				
 			}
 		}
 		@media (max-width: 575px) {

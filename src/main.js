@@ -17,4 +17,15 @@ export default function(Vue, { router, head, isClient, appOptions }) {
     //Базовая разметка
     Vue.component('Layout', DefaultLayout)
 
+    Vue.directive('scroll', {
+		inserted: function (el, binding) {
+			let f = function (evt) {
+				if (binding.value(evt, el)) {
+					window.removeEventListener('scroll', f)
+				}
+			}
+			window.addEventListener('scroll', f)
+		}
+	})
+
 }

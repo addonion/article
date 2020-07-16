@@ -1,9 +1,9 @@
 <template>
-	<b-navbar toggleable="lg" class="pt-4 pb-4">
+	<b-navbar toggleable="lg" :class="{'pt-2 pb-2': scrolled, 'pt-4 pb-4': !scrolled}" v-scroll="handleScroll">
 
 		<!-- Логотип -->
 		<g-link to="/">
-			<g-image src="~/assets/images/cq_logo.svg" width="170" height="35" alt="dashly" />
+			<g-image src="~/assets/images/cq_logo.svg" width="170" height="35" class="logo ml-3" alt="Dashly" />
 		</g-link>
 
 		<!-- Мобильное меню гамбургер -->
@@ -14,12 +14,12 @@
 			<b-navbar-nav class="ml-auto">
 				<template v-for="( item , index ) in topMenu">
 
-					<b-nav-item v-if="!item.subLinks" :href="item.to" :key="index" class="font-weight-bold mr-3">
+					<b-nav-item v-if="!item.subLinks" :href="item.to" :key="index" class="mr-1">
 						{{ item.title }}
 					</b-nav-item>
 
-					<b-nav-item-dropdown hover v-else-if="item.subLinks" :text="item.title" :key="index" class="font-weight-bold mr-3">
-						<b-dropdown-item v-for="( subLink , index ) in item.subLinks" :href="subLink.to" :key="index" class="font-weight-bold">
+					<b-nav-item-dropdown hover v-else-if="item.subLinks" :text="item.title" :key="index" class="mr-1">
+						<b-dropdown-item v-for="( subLink , index ) in item.subLinks" :href="subLink.to" :key="index">
 							{{ subLink.title }}
 						</b-dropdown-item>
 					</b-nav-item-dropdown>
@@ -28,10 +28,10 @@
 			</b-navbar-nav>
 
 			<!-- Кнопки -->
-			<b-button variant="primary" href="/panel/register/" class="ml-4 text-uppercase ml-6 mr-3">
+			<b-button variant="primary" href="/panel/register/" class="ml-1 mr-1 px-2 ml-xl-3 mr-xl-3 px-xl-4">
 				Зарегистрироваться
 			</b-button>
-			<b-button variant="outline" href="/panel/login/" class="text-uppercase">
+			<b-button variant="outline" href="/panel/login/">
 				Войти
 			</b-button>
 
@@ -46,7 +46,32 @@
 
 <script>
 	export default {
+		methods: {
+			handleScroll() {
+				if (this.lastPosition < window.scrollY && this.limitPosition < window.scrollY) {
+					this.scrolled = true;
+					// move up!
+				} 
+				
+				if (this.lastPosition > window.scrollY) {
+					this.scrolled = false;
+					// move down
+				}
+				
+				this.lastPosition = window.scrollY;
+				// this.scrolled = window.scrollY > 250;
+			}
+		},
+		created() {
+			window.addEventListener("scroll", this.handleScroll);
+		},
+		destroyed() {
+			window.removeEventListener("scroll", this.handleScroll);
+		},
 		data: () => ({
+			limitPosition: 500,
+      		scrolled: false,
+			lastPosition: 0,
 			topMenu: [
 				{
 					title: 'Инструменты',
@@ -168,6 +193,7 @@
 		right: 0;
 		top: 0;
 		z-index: 100;
+		transition: 0.3s all cubic-bezier(0.39, 0.575, 0.565, 1);
 
 		a,
 		ul,
@@ -176,10 +202,30 @@
 			position: relative;
 			z-index: 3
 		}
+
+		.logo {
+			position: relative;
+			top: -2px;
+		}
+
+		.dropdown-toggle::after {
+			width: 5px;
+			height: 5px;
+			margin-left: 0.5em;
+			border: none;
+			border-left: 1px solid #333;
+			border-bottom: 1px solid #333;
+			transform: rotate(-45deg);    
+		}
+
+		.dropdown-item {
+			padding: 0.5rem 1rem;
+		}
 		
 		.blur {
-			background-color: rgba(255, 255, 255, 0.97);
+			background-color: rgba(255, 255, 255, 0.90);
 			backdrop-filter: blur(10px);
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -191,5 +237,11 @@
 	
 	.page {
 		padding-top: 88px;
+	}
+
+	@media (max-width: 1199.98px) {
+		.navbar {
+			font-size: 0.875em;
+		}
 	}
 </style>
