@@ -8,7 +8,7 @@
 		<!-- Изображение записи -->
 		<b-row>
 			<b-col class="post__categories mt-3 mb-4">
-				<b-nav>
+				<b-nav class="navbar-right">
 					<b-nav-item href="/blog/kejsy/">Кейсы</b-nav-item>
 					<b-nav-item href="/blog/konversiya/">Конверсия</b-nav-item>
 					<b-nav-item href="/blog/automation/">Автоматизация</b-nav-item>
@@ -867,6 +867,7 @@
 			.nav-link {
 				padding-left: 0;
 				padding-right: 0;
+				color: #000;
 			}
 			.active {
 				border-bottom: 2px solid #467AFF;

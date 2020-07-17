@@ -205,6 +205,10 @@
 			top: -2px;
 		}
 
+		.nav-link {
+			color: #000 !important;
+		}
+
 		.dropdown-toggle::after {
 			width: 5px;
 			height: 5px;
