@@ -8,15 +8,6 @@
 
 		<!-- Мобильное меню гамбургер -->
 		<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-		<div class="mobile-menu">
-			<a href="#menu">
-				<span></span>
-			</a>
-			<nav id="menu">
-				<!-- menu list to insert here -->
-				123
-			</nav>
-		</div>
 		
 		<b-collapse is-nav id="nav_collapse">
 

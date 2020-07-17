@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 
-        <a href="/blog/customer-development-2/">Тестовая статья</a>
+        <g-link to="/blog/customer-development-2/">Тестовая статья</g-link>
 
 	</Layout>
 </template>
