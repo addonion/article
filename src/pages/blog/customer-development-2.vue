@@ -2,12 +2,12 @@
 	<Layout class="post">
 		<!-- Прогрес бар чтения -->
 		<ClientOnly>
-			<read-progress  color="#FFD5B2" height="2px" :shadow="false"></read-progress>
+			<read-progress  color="#717171" height="2px" :shadow="false"></read-progress>
 		</ClientOnly>
 
 		<!-- Изображение записи -->
 		<b-row>
-			<b-col class="post__categories mt-3 mb-4">
+			<b-col class="post__categories mb-4 d-none d-lg-flex">
 				<b-nav class="navbar-right">
 					<b-nav-item href="/blog/kejsy/">Кейсы</b-nav-item>
 					<b-nav-item href="/blog/konversiya/">Конверсия</b-nav-item>
@@ -21,19 +21,22 @@
 			</b-col>
 		</b-row>
 
-		<!-- Хлебные крошки -->
+		
 		<b-row>
-			<b-col col xl="10" offset-xl="1">
+			<b-col col xl="10" offset-xl="1" class="order-2 order-md-1 mb-5">
 				<div class="post__about">
 					
-					<b-breadcrumb class="font12px mb-3">
+					<!-- Хлебные крошки -->
+					<b-breadcrumb class="font12px mb-3 d-none d-md-flex">
 						<b-breadcrumb-item href="/">Главная</b-breadcrumb-item>
 						<b-breadcrumb-item href="/blog/">Блог</b-breadcrumb-item>
 						<b-breadcrumb-item active>Customer Development или как протестировать идею фичи за 2 дня</b-breadcrumb-item>
 					</b-breadcrumb>
 
+					<!-- Заголовок -->
 					<h1 class=" mb-3">Customer Development или как протестировать идею фичи за 2 дня</h1>
 
+					<!-- Информация -->
 					<div class="post__about__info font14px">
 						<span class="date">20 мая, 2020</span>
 						|
@@ -42,14 +45,15 @@
 					
 				</div>
 			</b-col>
-		</b-row>
 
-		<!-- Изображение записи -->
-		<b-row>
-			<b-col class="post__image my-5">
-				<g-image src="~/assets/images/article/Фичи-min.jpg" width="1100" alt="Customer Development или как протестировать идею фичи за 2 дня" />
+			<!-- Изображение записи -->
+			<b-col col cols="12" class="post__image mb-4 mb-md-5 order-1 order-md-2">
+				<g-image src="~/assets/images/article/Фичи-min.jpg" class="d-none d-md-block" width="1100" alt="Customer Development или как протестировать идею фичи за 2 дня" />
+				<g-image src="~/assets/images/article/Фичи-min.jpg" class="d-md-none" width="500" height="500" alt="Customer Development или как протестировать идею фичи за 2 дня" />
 			</b-col>
+
 		</b-row>
+		
 		
 		<!-- Текст статьи -->
 		<b-row class="post__content font17px">
@@ -852,294 +856,3 @@
 	}
 
 </script>
-
-<style lang="scss">
-	.post {
-		*::selection {
-			color: #fff;
-			background: #3735A8;
-		}
-
-		&__categories {
-			.nav-item {
-				margin-right: 24px;
-			}
-			.nav-link {
-				padding-left: 0;
-				padding-right: 0;
-				color: #000;
-			}
-			.active {
-				border-bottom: 2px solid #467AFF;
-			}
-		}
-
-		&__image img {
-			border-radius: 5px;
-		}
-
-		&__about__info {
-			color: #A6A6A6;
-		}
-
-		&__authtor {
-			position: absolute;
-			top: 0;
-			right: 20px;
-			img {
-				width: 80px;
-				border-radius: 50%; 
-				margin-bottom: 0.5rem;
-			}
-		}
-
-		$content-tags: 'h1, h2, h3, p, figure, ul, ol';
-
-		&__content {
-			position: relative;
-			line-height: 1.875em;
-
-			h1, h2, h3 {
-				margin-bottom: 1rem;
-			}
-			p, figure {
-				margin-bottom: 2rem;
-			}
-		}
-
-		img, video {
-			max-width: 100%;
-		}
-
-		@media (min-width: 1200px) {
-			&__authtor {
-				width: calc(35% - 120px);
-			}
-
-			&__content {
-				#{$content-tags} {
-					max-width: 65%;
-				}
-			}
-		}
-		@media (max-width: 1199px) {
-			&__image {
-				margin-top: 55px;
-			}
-			&__authtor {
-				width: calc(30% - 100px);
-			}
-
-			&__content {
-				#{$content-tags} {
-					max-width: 70%;
-				}
-			}
-		}
-		@media (max-width: 991px) {
-			&__authtor {
-				width: 33%;
-				position: relative;
-			}
-
-			&__content {
-				#{$content-tags} {
-					max-width: 100%;
-				}
-			}
-		}
-		@media (max-width: 575px) {
-			&__image {
-				margin-top: 30px;
-			}
-		}
-	}
-
-
-
-
-	.cq-block-quote {
-			position: relative;
-			padding-bottom: 60px;
-			max-width: 770px !important;
-			margin-top: 20px !important;
-			margin-bottom: 20px !important;
-		}
-
-		.cq-block-quote__text {
-			font-size: 22px;
-			line-height: 32px;
-			background: linear-gradient(-5deg, #FFFFFF -100px, #CAC9FA 100%);
-			padding: 30px 40px 40px;
-			border-radius: 5px;
-		}
-
-		.cq-block-quote__meta {
-			background: #FFFFFF;
-			box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
-			background: #fff;
-			position: absolute;
-			padding: 16px 20px;
-			right: 40px;
-			bottom: 0;
-			max-width: 100%;
-		}
-
-		@media (max-width: 576px) {
-			.cq-block-quote {
-				padding: 0 20px 30px;
-				margin-bottom: 30px !important;
-			}
-
-			.cq-block-quote__text {
-				font-size: 18px;
-				line-height: 26px;
-				padding: 5px 16px 65px;
-			}
-
-			.cq-block-quote__meta {
-				right: 40px;
-				left: 20px;
-				padding: 16px 12px;
-			}
-		}
-
-		.lidform-universal-container {
-            margin-top: 100px;
-            margin-bottom: 90px;
-            max-width: 100%;
-        }
-
-        #lidform-universal_504732347 {
-            background: #A7A5F8 url(https://www.carrotquest.io/blog/wp-content/uploads/2020/05/image-10-1-2.png) bottom right;
-            background-repeat: no-repeat;
-        }
-
-        .lidform-universal {
-            background-repeat: no-repeat;
-            border-radius: 5px;
-            padding: 40px 30px;
-            position: relative;
-            min-height: 140px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .lidform-universal .row {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .lidform-universal p,
-        .lidform-universal h5 {
-            font-family: "StagSansLCTTBook", Arial, sans-serif;
-            line-height: 1.2em;
-            margin: 0;
-        }
-
-        #lidform-universal_504732347 .lidform-universal-p-1 {
-            color: #ffffff;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        #lidform-universal_504732347 .lidform-universal-h5 {
-            color: #ffffff;
-            font-size: 22px;
-            font-weight: medium;
-            margin-bottom: 20px;
-        }
-
-        .lidform-universal-right-pic img {
-            display: block;
-            position: absolute;
-            bottom: -40px;
-            right: 0;
-            max-width: max-content;
-        }
-
-        .form-begin {
-            margin-top: 10px;
-            display: flex;
-        }
-
-        .form-begin .input {
-            padding: 10px;
-            width: 60%;
-            border-radius: 5px 0 0 5px;
-            border-right: none;
-        }
-
-        .form-begin .button {
-            border-radius: 0 5px 5px 0;
-        }
-
-        #lidform-universal_504732347 .form-done {
-            margin-top: 20px !important;
-            display: none;
-            height: 52px;
-            color: #ffffff;
-        }
-
-        .form-begin_site {
-            flex-wrap: wrap;
-        }
-
-        .form-begin_site input {
-            border-radius: 5px !important;
-        }
-
-        .form-begin_site .input {
-            width: 47% !important;
-            margin-bottom: 15px !important;
-            border-right: 1px solid #ccc;
-        }
-
-        .form-begin_site .site {
-            margin-right: 6% !important;
-        }
-
-        @media (max-width: 767px) {
-            .form-begin {
-                flex-wrap: wrap;
-            }
-
-            .form-begin input {
-                width: 100% !important;
-                margin-bottom: 10px;
-                border-radius: 5px !important;
-            }
-
-            .form-begin_site .input {
-                width: 100% !important;
-                margin-right: 0 !important;
-            }
-
-            .lidform-universal-container {
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
-
-            .lidform-universal {
-                padding: 20px 0;
-                background-image: none !important;
-            }
-
-            .lidform-universal br {
-                display: none;
-            }
-
-            .lidform-universal-right-pic {
-                right: 0 !important;
-            }
-
-            .lidform-universal-right-pic img {
-                position: relative;
-                max-width: 100%;
-                margin: 0 auto;
-                bottom: -20px;
-                max-height: 180px;
-            }
-        }
-	
-</style>

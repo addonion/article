@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 
-        <a href="/blog/customer-development-2/">Test</a>
+        <a href="/blog/customer-development-2/">Тестовая статья</a>
 
 	</Layout>
 </template>

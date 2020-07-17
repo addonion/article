@@ -1,23 +1,21 @@
 //Колонки
 $grid-gutter-width: 40px;
-
 //Оформление кнопок и ссылок
 $primary: #ff892a;
-.btn-primary {color: #fff !important;}
-$link-hover-decoration: none;
+.btn-primary {
+    color: #fff !important;
+}
 
+$link-hover-decoration: none;
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
-
-
 $blue-link: #467AFF;
-
-
+$grey: #9A9A9A;
+$light-grey: #F2F2F2;
 //Подключаем шрифты
 @font-face {
     font-family: 'Stag Sans Black';
-    src:    url('../font/StagSans-Black.woff2') format('woff2'),
-            url('../font/StagSans-Black.woff') format('woff');
+    src: url('../font/StagSans-Black.woff2') format('woff2'), url('../font/StagSans-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -27,14 +25,25 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.page {
+    padding-top: 116px;
+    margin-bottom: 100px;
+    @media (max-width: 575.98px) {
+        padding-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
 .font12px {
-    font-size: 0.750em;
+    font-size: 0.750rem;
 }
+
 .font14px {
-    font-size: 0.875em;
+    font-size: 0.875rem;
 }
+
 .font17px {
-    font-size: 1.063em;
+    font-size: 1.063rem;
 }
 
 a {
@@ -50,6 +59,13 @@ h1 {
     margin: 0;
     background: transparent;
     * {
-        color: #A6A6A6;
+        color: $grey;
     }
 }
+
+//Верхняя навигация
+@import 'navbar.scss';
+//Подвал
+@import 'footer.scss';
+//Статья блога
+@import 'article.scss';

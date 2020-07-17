@@ -3,30 +3,32 @@
 
 //Bootstrap
 import BootstrapVue from 'bootstrap-vue'
+
 //Общие стили
 import '~/assets/scss/app.scss'
+
 //Базовая разметка
 import DefaultLayout from '~/layouts/Default.vue'
 
 
 export default function(Vue, { router, head, isClient, appOptions }) {
-    
+
     //Bootstrap
     Vue.use(BootstrapVue)
 
     //Базовая разметка
     Vue.component('Layout', DefaultLayout)
 
-	//v-scroll
+    //v-scroll
     Vue.directive('scroll', {
-		inserted: function (el, binding) {
-			let f = function (evt) {
-				if (binding.value(evt, el)) {
-					window.removeEventListener('scroll', f)
-				}
-			}
-			window.addEventListener('scroll', f)
-		}
-	})
+        inserted: function(el, binding) {
+            let f = function(evt) {
+                if (binding.value(evt, el)) {
+                    window.removeEventListener('scroll', f)
+                }
+            }
+            window.addEventListener('scroll', f)
+        }
+    })
 
 }

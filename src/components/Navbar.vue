@@ -1,13 +1,23 @@
 <template>
-	<b-navbar toggleable="lg" :class="{'pt-2 pb-2': scrolled, 'pt-4 pb-4': !scrolled}" v-scroll="handleScroll">
+	<b-navbar toggleable="lg" :class="{'pt-2 pb-2': scrolled, 'pt-3 pb-3 pt-md-4 pb-md-4': !scrolled}" v-scroll="handleScroll">
 
 		<!-- Логотип -->
 		<g-link to="/">
-			<g-image src="~/assets/images/cq_logo.svg" width="170" height="35" class="logo ml-3" alt="Dashly" />
+			<g-image src="~/assets/images/cq_logo.svg" width="170" height="35" class="logo ml-2 ml-md-3" alt="Dashly" />
 		</g-link>
 
 		<!-- Мобильное меню гамбургер -->
 		<b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+		<div class="mobile-menu">
+			<a href="#menu">
+				<span></span>
+			</a>
+			<nav id="menu">
+				<!-- menu list to insert here -->
+				123
+			</nav>
+		</div>
+		
 		<b-collapse is-nav id="nav_collapse">
 
 			<!-- Выпадающее меню -->
@@ -46,6 +56,17 @@
 
 <script>
 	export default {
+		mounted() {
+			new Mmenu(document.querySelector('#menu'))
+
+			document.addEventListener('click', evnt => {
+				let anchor = evnt.target.closest('a[href^="#/"]')
+				if (anchor) {
+					// Go somewhere
+					evnt.preventDefault()
+				}
+			})
+		},
 		methods: {
 			handleScroll() {
 				if (this.lastPosition < window.scrollY && this.limitPosition < window.scrollY) {
@@ -178,71 +199,3 @@
 		}),
 	}
 </script>
-
-<style lang="scss">
-	.navbar {
-		border-bottom: 1px solid #f3f3f3;
-		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		z-index: 100;
-		transition: 0.3s all cubic-bezier(0.39, 0.575, 0.565, 1);
-
-		a,
-		ul,
-		button,
-		#nav_collapse {
-			position: relative;
-			z-index: 3;
-			&:focus-within {
-				outline: none !important;
-			}
-		}
-
-		.logo {
-			position: relative;
-			top: -2px;
-		}
-
-		.nav-link {
-			color: #000 !important;
-		}
-
-		.dropdown-toggle::after {
-			width: 5px;
-			height: 5px;
-			margin-left: 0.5em;
-			border: none;
-			border-left: 1px solid #333;
-			border-bottom: 1px solid #333;
-			transform: rotate(-45deg);outline: none !important;
-		}
-
-		.dropdown-item {
-			padding: 0.5rem 1rem;
-		}
-		
-		.blur {
-			background-color: rgba(255, 255, 255, 0.90);
-			backdrop-filter: blur(10px);
-			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 1;
-		}
-	}
-	
-	.page {
-		padding-top: 88px;
-	}
-
-	@media (max-width: 1199.98px) {
-		.navbar {
-			font-size: 0.875em;
-		}
-	}
-</style>
