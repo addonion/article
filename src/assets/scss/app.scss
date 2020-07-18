@@ -9,9 +9,11 @@ $primary: #ff892a;
 $link-hover-decoration: none;
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
+
 $blue-link: #467AFF;
-$grey: #9A9A9A;
+$grey-text: #9A9A9A;
 $light-grey: #F2F2F2;
+
 //Подключаем шрифты
 @font-face {
     font-family: 'Stag Sans Black';
@@ -19,6 +21,11 @@ $light-grey: #F2F2F2;
     font-weight: 900;
     font-style: normal;
     font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -45,6 +52,9 @@ body {
 .font17px {
     font-size: 1.063rem;
 }
+.grey-text {
+    color: $grey-text;
+}
 
 a {
     color: $blue-link;
@@ -54,12 +64,18 @@ h1 {
     font-family: 'Stag Sans Black';
 }
 
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
 .breadcrumb {
     padding: 0;
     margin: 0;
     background: transparent;
     * {
-        color: $grey;
+        color: $grey-text;
     }
 }
 
