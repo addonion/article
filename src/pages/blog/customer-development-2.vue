@@ -67,7 +67,7 @@
 
 			<div class="post__creators post__text__rightbox d-none d-lg-block">
 			<div class="mb-5">
-				<g-image src="~/assets/images/article/lera.png" alt="Мария Бурдина" />
+				<g-image src="~/assets/images/article/lera.png" alt="Валерия Попкова" />
 				<p>
 				<b>Рассказала</b>
 				</p>
@@ -83,7 +83,7 @@
 				<p class="font14px grey-text">Редактор блога</p>
 			</div>
 			<div class="mb-5">
-				<g-image src="~/assets/images/article/masha.png" alt="Мария Бурдина" />
+				<g-image src="~/assets/images/article/olya.png" alt="Оля Кузеванова" />
 				<p>
 				<b>Нарисовала</b>
 				</p>
@@ -211,29 +211,11 @@
 			Зачем нужен Customer Development и
 			как его результаты работают на&nbsp;практике
 			</h2>
-			<div id="quote_345465573" class="cq-block-quote">
-			<div class="cq-block-quote__text">
-				<p>
+			<p>
 				Кастдевы&nbsp;&mdash; это инструмент, который помогает нам избегать наших галлюцинаций и&nbsp;видеть реальную картину
 				мира. Мы&nbsp;можем придумать что угодно, а&nbsp;в&nbsp;реальности все может быть совсем не&nbsp;так. Нужно идти и
 				валидировать идею, которая у&nbsp;нас появилась.
-				</p>
-			</div>
-
-			<div class="cq-block-quote__meta">
-				<div class="author__image">
-				<g-image
-					src="~/assets/images/article/1592_oooo.plus_.png"
-					width="51"
-					alt="Валерия Попкова"
-				/>
-				</div>
-				<div class="author__meta">
-				<div class="author__meta-name">Валерия Попкова</div>
-				<div>Growth Marketing, Dashly.io</div>
-				</div>
-			</div>
-			</div>
+			</p>
 			<figure class="wp-block-image alignwide">
 			<g-image
 				src="~/assets/images/article/Дэшли главная 1.png"
@@ -290,29 +272,33 @@
 			<li>и&nbsp;другие важные вещи.</li>
 			</ul>
 			<p>Процесс продаж тоже зависит от&nbsp;кастдевов.</p>
-			<div id="quote_647634473" class="cq-block-quote">
-			<div class="cq-block-quote__text">
-				<p>
-				Менеджер по&nbsp;продажам должен во&nbsp;время демо задавать правильные вопросы, чтобы предлагать нужное решение,
-				понимать, что входит в&nbsp;зону ответственности того или иного человека, как могут быть устроены процессы в
-				компании потенциального клиента.
-				</p>
+
+
+			<div id="quote_647634473" class="post__quote row">
+				<b-col>
+					<g-image
+						src="~/assets/images/article/lera.png"
+						width="260"
+						alt="Валерия Попкова"
+					/>
+				</b-col>
+				<b-col>				
+					<p>
+						«Менеджер по&nbsp;продажам должен во&nbsp;время демо задавать правильные вопросы, чтобы предлагать нужное решение,
+						понимать, что входит в&nbsp;зону ответственности того или иного человека, как могут быть устроены процессы в
+						компании потенциального клиента.»
+					</p>
+					<p class="author__meta">
+						<b>Валерия Попкова</b>
+						<br>
+						<span class="font14px grey-text">
+							Growth Marketing, Dashly.io
+						</span>
+					</p>
+				</b-col>
 			</div>
 
-			<div class="cq-block-quote__meta">
-				<div class="author__image">
-				<g-image
-					src="~/assets/images/article/1592_oooo.plus_.png"
-					width="51"
-					alt="Валерия Попкова"
-				/>
-				</div>
-				<div class="author__meta">
-				<div class="author__meta-name">Валерия Попкова</div>
-				<div>Growth Marketing, Dashly.io</div>
-				</div>
-			</div>
-			</div>
+
 			<p>Опыт исследования пользователей дает менеджерам нужный для этого бэкграунд.</p>
 			<p>Результаты Customer Development непосредственно в&nbsp;своей работе используют:</p>
 			<ul>

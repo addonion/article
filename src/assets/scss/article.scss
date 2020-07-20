@@ -16,16 +16,19 @@
 		border-bottom: 2px solid $blue-link;
 		}
 	}
+
 	//Основное изображение статьи
 	&__image img {
 		border-radius: 5px;
 		max-width: 100%;
 	}
+
 	//Оформление контента
 	$content-tags: "&>h1, &>h2, &>h3, &>p, &>figure, &>ul, &>ol, &>div";
 	&__content {
 		position: relative;
 	}
+
 	//Авторы и участники
 	&__creators {
 		img {
@@ -68,6 +71,17 @@
 			max-width: 100%;
 		}
 	}
+
+	//Цитата, стиль с фото
+	&__quote {
+		margin-left: 0 !important;
+		max-width: 70% !important;
+
+		img:before {
+			content: " ";
+		}
+	}
+	
 	//Адаптация под устройства
 	@media (min-width: 1200px) {
 		&__text {
@@ -81,6 +95,9 @@
 				width: 23%;
 				z-index: 2;
 			}
+		}
+		&__quote {
+			max-width: 70% !important;
 		}
 	}
 	@media (max-width: 1199px) {
@@ -117,182 +134,5 @@
 				}
 			}
 		}
-	}
-}
-
-	.cq-block-quote {
-	position: relative;
-	padding-bottom: 60px;
-	max-width: 770px !important;
-	margin-top: 20px !important;
-	margin-bottom: 20px !important;
-	}
-
-	.cq-block-quote__text {
-	font-size: 22px;
-	line-height: 32px;
-	background: linear-gradient(-5deg, #ffffff -100px, #cac9fa 100%);
-	padding: 30px 40px 40px;
-	border-radius: 5px;
-	}
-
-	.cq-block-quote__meta {
-	background: #ffffff;
-	box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
-	background: #fff;
-	position: absolute;
-	padding: 16px 20px;
-	right: 40px;
-	bottom: 0;
-	max-width: 100%;
-	}
-
-	@media (max-width: 576px) {
-	.cq-block-quote {
-		padding: 0 20px 30px;
-		margin-bottom: 30px !important;
-	}
-	.cq-block-quote__text {
-		font-size: 18px;
-		line-height: 26px;
-		padding: 5px 16px 65px;
-	}
-	.cq-block-quote__meta {
-		right: 40px;
-		left: 20px;
-		padding: 16px 12px;
-	}
-	}
-
-	.lidform-universal-container {
-	margin-top: 100px;
-	margin-bottom: 90px;
-	max-width: 100%;
-	}
-
-	#lidform-universal_504732347 {
-	background: #a7a5f8
-		url(https://www.carrotquest.io/blog/wp-content/uploads/2020/05/image-10-1-2.png)
-		bottom right;
-	background-repeat: no-repeat;
-	}
-
-	.lidform-universal {
-	background-repeat: no-repeat;
-	border-radius: 5px;
-	padding: 40px 30px;
-	position: relative;
-	min-height: 140px;
-	max-width: 1100px;
-	margin: 0 auto;
-	}
-
-	.lidform-universal .row {
-	max-width: 720px;
-	margin: 0 auto;
-	}
-
-	.lidform-universal p,
-	.lidform-universal h5 {
-	font-family: "StagSansLCTTBook", Arial, sans-serif;
-	line-height: 1.2em;
-	margin: 0;
-	}
-
-	#lidform-universal_504732347 .lidform-universal-p-1 {
-	color: #ffffff;
-	font-size: 16px;
-	margin-bottom: 5px;
-	}
-
-	#lidform-universal_504732347 .lidform-universal-h5 {
-	color: #ffffff;
-	font-size: 22px;
-	font-weight: medium;
-	margin-bottom: 20px;
-	}
-
-	.lidform-universal-right-pic img {
-	display: block;
-	position: absolute;
-	bottom: -40px;
-	right: 0;
-	max-width: max-content;
-	}
-
-	.form-begin {
-	margin-top: 10px;
-	display: flex;
-	}
-
-	.form-begin .input {
-	padding: 10px;
-	width: 60%;
-	border-radius: 5px 0 0 5px;
-	border-right: none;
-	}
-
-	.form-begin .button {
-	border-radius: 0 5px 5px 0;
-	}
-
-	#lidform-universal_504732347 .form-done {
-	margin-top: 20px !important;
-	display: none;
-	height: 52px;
-	color: #ffffff;
-	}
-
-	.form-begin_site {
-	flex-wrap: wrap;
-	}
-
-	.form-begin_site input {
-	border-radius: 5px !important;
-	}
-
-	.form-begin_site .input {
-	width: 47% !important;
-	margin-bottom: 15px !important;
-	border-right: 1px solid #ccc;
-	}
-
-	.form-begin_site .site {
-	margin-right: 6% !important;
-	}
-
-	@media (max-width: 767px) {
-	.form-begin {
-		flex-wrap: wrap;
-	}
-	.form-begin input {
-		width: 100% !important;
-		margin-bottom: 10px;
-		border-radius: 5px !important;
-	}
-	.form-begin_site .input {
-		width: 100% !important;
-		margin-right: 0 !important;
-	}
-	.lidform-universal-container {
-		margin-top: 50px;
-		margin-bottom: 50px;
-	}
-	.lidform-universal {
-		padding: 20px 0;
-		background-image: none !important;
-	}
-	.lidform-universal br {
-		display: none;
-	}
-	.lidform-universal-right-pic {
-		right: 0 !important;
-	}
-	.lidform-universal-right-pic img {
-		position: relative;
-		max-width: 100%;
-		margin: 0 auto;
-		bottom: -20px;
-		max-height: 180px;
 	}
 }
