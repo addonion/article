@@ -274,28 +274,37 @@
 			<p>Процесс продаж тоже зависит от&nbsp;кастдевов.</p>
 
 
-			<div id="quote_647634473" class="post__quote row">
-				<b-col>
-					<g-image
-						src="~/assets/images/article/lera.png"
-						width="260"
-						alt="Валерия Попкова"
-					/>
-				</b-col>
-				<b-col>				
-					<p>
-						«Менеджер по&nbsp;продажам должен во&nbsp;время демо задавать правильные вопросы, чтобы предлагать нужное решение,
-						понимать, что входит в&nbsp;зону ответственности того или иного человека, как могут быть устроены процессы в
-						компании потенциального клиента.»
-					</p>
-					<p class="author__meta">
-						<b>Валерия Попкова</b>
-						<br>
-						<span class="font14px grey-text">
-							Growth Marketing, Dashly.io
-						</span>
-					</p>
-				</b-col>
+			<div id="quote_647634473" class="post__quote my-5">
+				<b-row>
+					<b-col cols="6" md="4" lg="4" class="post__quote__photo mb-4 mb-md-0">
+						<g-image
+							src="~/assets/images/article/lera.png"
+							width="260"
+							class="photo"
+							alt="Валерия Попкова"
+						/>
+						<g-image
+							src="~/assets/images/article/smash.png"
+							width="100"
+							class="smash"
+							alt="Всплеск"
+						/>
+					</b-col>
+					<b-col cols="12" md="8" lg="8" class="py-lg-3">	
+						<p>
+							«Менеджер по&nbsp;продажам должен во&nbsp;время демо задавать правильные вопросы, чтобы предлагать нужное решение,
+							понимать, что входит в&nbsp;зону ответственности того или иного человека, как могут быть устроены процессы в
+							компании потенциального клиента.»
+						</p>
+						<p class="author__meta">
+							<b>Валерия Попкова</b>
+							<br>
+							<span class="font14px grey-text">
+								Growth Marketing, Dashly.io
+							</span>
+						</p>
+					</b-col>
+				</b-row>
 			</div>
 
 
@@ -309,6 +318,30 @@
 			<li>команда продаж.</li>
 			</ul>
 			<h2 id="instrumenty-customer-development">Инструменты Customer Development</h2>
+
+
+			<div class="post__text__rightbox d-none d-lg-block">
+				<p><b>Читайте также:</b></p>
+				<a 
+					href="/blog/product-strategy/"
+					rel="noreferrer noopener"
+					target="_blank"
+				>
+					<g-image
+						src="~/assets/images/article/article.png"
+						width="260"
+						height="140"
+						alt="Думать медленно, решать быстро: как разработать продуктовую стратегию в условиях неопределённости"
+						class="post__text__rightbox__cover mb-2"
+					/>
+					<span class="font14px">
+						Думать медленно, решать быстро: как разработать продуктовую стратегию в&nbsp;условиях неопределённости
+					</span>
+				</a>
+				
+			</div>
+
+
 			<p>
 			Основной инструмент Customer Development&nbsp;&mdash; глубинные интервью. В&nbsp;рамках этого подхода интервью бывают двух
 			видов:
@@ -319,8 +352,29 @@
 			</li>
 			</ul>
 			<p>Цель таких интервью&nbsp;&mdash; проверить гипотезу и&nbsp;узнать о&nbsp;неочевидных проблемах пользователей.</p>
+			
+			
+			
+			<div class="post__text__leftbox">
+				<g-image
+					src="~/assets/images/article/click.png"
+					width="59"
+					height="57"
+					alt="click"
+				/>
+				<p>
+					<em><b>Пример гипотезы:</b> 
+					<br> 
+					«Нужно продвигать Dashly среди автодилеров и&nbsp;агентств недвижимости».</em>
+				</p>
+			</div>
+			
 			<p>
-			<em>Пример гипотезы: &laquo;Нужно продвигать Dashly среди автодилеров и&nbsp;агентств недвижимости&raquo;.</em> Она не
+			
+			</p>
+			
+			<p>
+			Она не
 			подтвердилась, и&nbsp;мы&nbsp;смогли быстро пойти дальше&nbsp;&mdash; искать другие сегменты.
 			</p>
 			<ul>
@@ -343,7 +397,20 @@
 			интерфейс, в&nbsp;ходе решенческого интервью&nbsp;&mdash; само решение, его ценность.
 			</p>
 
+
+
 			<h2 id="etapy-issledovaniya-i-neobhodimye-shagi">Этапы исследования и&nbsp;необходимые шаги</h2>
+			<div class="post__text__rightbox font14px grey-text">
+				<g-image
+					src="~/assets/images/article/like.png"
+					width="61"
+					height="61"
+					alt="like"
+				/>
+				<p>
+					Поскольку мы&nbsp;не&nbsp;столько тестируем продукт, сколько каналы продвижения и&nbsp;выбираем сегменты, в&nbsp;которых будем продвигать продукт в&nbsp;ближайшее время, то&nbsp;проводим преимущественно проблемные интервью. А&nbsp;решенческие интервью совмещаем с&nbsp;демо продукта.
+				</p>
+			</div>
 			<p>
 			Если вы&nbsp;планируете Customer Development полного цикла для нового продукта или фичи&nbsp;&mdash; исследование будет
 			разбиваться на&nbsp;две части: до&nbsp;и&nbsp;после появления MVP. в&nbsp;первой части исследования вы&nbsp;будете проводить проблемные
@@ -357,23 +424,32 @@
 			<li>Находим подходящих респондентов, квалифицируем их&nbsp;и&nbsp;при необходимости фильтруем. Договариваемся на&nbsp;интервью.</li>
 			<li>Проводим интервью, по&nbsp;ходу интервью или сразу после фиксируем основные инсайты.</li>
 			</ol>
-			<div class="keythought">
-			<g-image src="~/assets/images/article/rockstar_icon.png" alt="rock" />
-			<span>
-				Поскольку мы&nbsp;не&nbsp;столько тестируем продукт, сколько каналы продвижения и&nbsp;выбираем сегменты, в&nbsp;которых будем
-				продвигать продукт в&nbsp;ближайшее время, то&nbsp;проводим преимущественно проблемные интервью. А&nbsp;решенческие
-				интервью совмещаем с&nbsp;демо продукта.
-			</span>
+			
+			
+			
+
+
+			<div class="post__text__leftbox">
+				<g-image
+					src="~/assets/images/article/click.png"
+					width="59"
+					height="57"
+					alt="click"
+				/>
+				<p>
+					<em>
+						<b>Пример:</b> 
+						<br>
+						В&nbsp;прошлом году команда Dashly провела большое исследование сектора SaaS. Инсайты, полученные в&nbsp;ходе этого
+						исследования, проверяли в&nbsp;ходе демо для потенциальных клиентов из&nbsp;этого сектора. Тогда мы&nbsp;узнали, что многие
+						чаты не&nbsp;переходят в&nbsp;режим офлайн, из-за чего операторам приходится отвечать на&nbsp;обращения в&nbsp;поддержку с&nbsp;телефона
+						до&nbsp;поздней ночи. Наш чат умеет это делать&nbsp;&mdash; это помогло нам убедить нескольких клиентов подключить Dashly.
+					</em>
+				</p>
 			</div>
-			<p>
-			<em>Пример:</em>
-			</p>
-			<p>
-			В&nbsp;прошлом году команда Dashly провела большое исследование сектора SaaS. Инсайты, полученные в&nbsp;ходе этого
-			исследования, проверяли в&nbsp;ходе демо для потенциальных клиентов из&nbsp;этого сектора. Тогда мы&nbsp;узнали, что многие
-			чаты не&nbsp;переходят в&nbsp;режим офлайн, из-за чего операторам приходится отвечать на&nbsp;обращения в&nbsp;поддержку с&nbsp;телефона
-			до&nbsp;поздней ночи. Наш чат умеет это делать&nbsp;&mdash; это помогло нам убедить нескольких клиентов подключить Dashly.
-			</p>
+
+
+
 			<div id="quote_1744209973" class="cq-block-quote">
 			<div class="cq-block-quote__text">
 				<p>
