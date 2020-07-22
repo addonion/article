@@ -2,7 +2,7 @@
 	<b-navbar toggleable="lg" :class="{'pt-2 pb-2': scrolled, 'pt-3 pb-3 pt-md-4 pb-md-4': !scrolled}" v-scroll="handleScroll">
 
 		<!-- Логотип -->
-		<g-link to="/">
+		<g-link to="https://www.carrotquest.io/">
 			<g-image src="~/assets/images/cq_logo.svg" width="170" height="35" class="logo ml-2 ml-md-3" alt="Dashly" />
 		</g-link>
 
@@ -47,17 +47,6 @@
 
 <script>
 	export default {
-		mounted() {
-			new Mmenu(document.querySelector('#menu'))
-
-			document.addEventListener('click', evnt => {
-				let anchor = evnt.target.closest('a[href^="#/"]')
-				if (anchor) {
-					// Go somewhere
-					evnt.preventDefault()
-				}
-			})
-		},
 		methods: {
 			handleScroll() {
 				if (this.lastPosition < window.scrollY && this.limitPosition < window.scrollY) {
