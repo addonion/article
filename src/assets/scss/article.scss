@@ -267,6 +267,10 @@
 				width: 80px;
 			}
 		}
+		&__registration {
+			background-position: -150px;
+			background-size: auto 100%;
+		}
 	}
 	@media (max-width: 767.98px) {
 		&__quote {
@@ -283,6 +287,9 @@
 					margin-bottom: 0.5rem;
 				}
 			}
+		}
+		&__registration {
+			background: #467AFF;
 		}
 		form {
 			display: block;

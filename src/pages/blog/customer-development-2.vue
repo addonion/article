@@ -44,7 +44,7 @@
 		</b-col>
 
 		<!-- Изображение записи -->
-		<b-col col cols="12" class="post__image mb-4 mb-md-5 order-1 order-md-2">
+		<b-col col cols="12" class="post__image mb-4 mb-md-4 order-1 order-md-2">
 			<g-image
 			src="~/assets/images/article/Фичи-min.jpg"
 			class="d-none d-md-block"
@@ -65,31 +65,31 @@
 		<b-row class="font17px post__content">
 			<b-col class="post__text">
 
-				<div class="post__creators post__text__rightbox d-none d-lg-block">
-				<div class="mb-5">
-					<g-image src="~/assets/images/article/lera.png" alt="Валерия Попкова" />
-					<p>
-					<b>Рассказала</b>
-					</p>
-					<p>Валерия Попкова</p>
-					<p class="font14px grey-text">Growth Marketing, Dashly.io</p>
-				</div>
-				<div class="mb-5">
-					<g-image src="~/assets/images/article/masha.png" alt="Мария Бурдина" />
-					<p>
-					<b>Записала</b>
-					</p>
-					<p>Мария Бурдина</p>
-					<p class="font14px grey-text">Редактор блога</p>
-				</div>
-				<div class="mb-5">
-					<g-image src="~/assets/images/article/olya.png" alt="Оля Кузеванова" />
-					<p>
-					<b>Нарисовала</b>
-					</p>
-					<p>Оля Кузеванова</p>
-					<p class="font14px grey-text">Иллюстратор</p>
-				</div>
+				<div class="post__creators post__text__rightbox d-none d-lg-block mt-5">
+					<div class="mb-5">
+						<g-image src="~/assets/images/article/lera.png" alt="Валерия Попкова" />
+						<p>
+						<b>Рассказала</b>
+						</p>
+						<p>Валерия Попкова</p>
+						<p class="font14px grey-text">Growth Marketing, Dashly.io</p>
+					</div>
+					<div class="mb-5">
+						<g-image src="~/assets/images/article/masha.png" alt="Мария Бурдина" />
+						<p>
+						<b>Записала</b>
+						</p>
+						<p>Мария Бурдина</p>
+						<p class="font14px grey-text">Редактор блога</p>
+					</div>
+					<div class="mb-5">
+						<g-image src="~/assets/images/article/olya.png" alt="Оля Кузеванова" />
+						<p>
+						<b>Нарисовала</b>
+						</p>
+						<p>Оля Кузеванова</p>
+						<p class="font14px grey-text">Иллюстратор</p>
+					</div>
 				</div>
 
 				<h3 id="toc-menu">Содержание:</h3>
@@ -503,14 +503,14 @@
 
 
 				
-				<div id="lidform-universal_504732347" class="post__lidform row align-items-center my-5 pt-3 pb-5">
-					<b-col cols="12" md="7" lg="5">
+				<div id="lidform-universal_504732347" class="post__lidform row align-items-center my-5 pt-5 pt-md-3 pb-5">
+					<b-col cols="12" md="7" lg="5" class="d-none d-md-block">
 						<g-image
 							src="~/assets/images/article/leadform.png"
 							alt="leadform"
 						/>
 					</b-col>
-					<b-col cols="12"  lg="7">
+					<b-col cols="12" lg="7">
 						<div class="h3 mb-4">
 							Псс, надо гайд с&nbsp;вопросами и&nbsp;шаблон для хранения данных из&nbsp;интервью?
 						</div>
@@ -811,8 +811,8 @@
 		</b-row>
 
 		<b-row class="post__registration align-items-center">
-			<b-col cols="12" lg="7" class="offset-lg-5">
-				<div class="h2">Подключите Carrot quest</div>
+			<b-col cols="12" md="7" lg="7" class="offset-md-4 offset-lg-5">
+				<div class="h2">Подключите Carrot&nbsp;quest</div>
 				<p>Первые 14 дней бесплатно</p>
 				<form v-on:submit.prevent="registration">
 					<input required type="email" v-model="regEmail" placeholder="Email" class="form__email py-2 px-3" />
@@ -913,7 +913,7 @@
 					doubleSubscribe: true
 				})
 				dataLayer.push({ event: 'UAevent', eventCategory: 'leads', eventAction: 'email', eventLabel: location.host + location.pathname })
-				//fbq('trackCustom', 'get_lead_from_blog')
+				fbq('trackCustom', 'get_lead_from_blog')
 				this.formSubmit = !this.formSubmit
 			},
 			registration () {
@@ -922,6 +922,8 @@
 			}
 		},
 		mounted() {
+
+
 			//Плавное перемещение по ссылке
 			const anchors = document.querySelectorAll("a.scroll-to");
 			for (let anchor of anchors) {
