@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-    // pathPrefix: '/blog/article/',
+    //pathPrefix: '/blog/article/',
 
     siteName: 'Carrot quest',
     titleTemplate: "%s",
@@ -21,10 +21,12 @@ module.exports = {
         }
     },
 
-    plugins: [{
+    plugins: [
+        {
             use: 'gridsome-plugin-gtm',
             options: {
-                id: 'GTM-PHNG63V',
+                //id: 'GTM-PHNG63V',  //CQ
+                id: 'GTM-TKFL867',  //Пустой
                 enabled: true,
                 debug: false
             }
