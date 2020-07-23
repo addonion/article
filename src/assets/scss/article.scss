@@ -153,7 +153,7 @@
 
 	//Регистрация
 	&__registration {
-		background: #467AFF url(../images/article/registration.png) center center no-repeat;
+		background: #467AFF url(../images/article/registration.jpg) center center no-repeat;
 		background-size: cover;
 		color: #fff;
 		height: 340px;
@@ -224,10 +224,10 @@
 			}
 			&__leftbox {
 				display: flex;
+				align-items: start;
 				img {
 					margin-right: 1rem;
 					margin-bottom: 0;
-					align-self: center;
 				}
 			}
 		}
@@ -250,9 +250,13 @@
 				width: 100%;
 				z-index: 2;
 				display: flex;
+				align-items: start;
+				a {
+					display: contents;
+				}
 				img, .h1 {
 					margin-right: 1rem;
-					margin-bottom: 0;
+					margin-bottom: 0;					
 				}
 				&.font14px , .font14px{
 					font-size: 1.063rem !important;

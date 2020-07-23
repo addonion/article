@@ -85,7 +85,7 @@
 					<div class="mb-5">
 						<g-image src="~/assets/images/article/olya.png" alt="Оля Кузеванова" />
 						<p>
-						<b>Нарисовала</b>
+						<b>Проиллюстрировала</b>
 						</p>
 						<p>Оля Кузеванова</p>
 						<p class="font14px grey-text">Иллюстратор</p>
